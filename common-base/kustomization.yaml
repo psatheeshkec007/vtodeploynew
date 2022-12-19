@@ -8,7 +8,7 @@ resources:
 - storefront-deploy.yaml
 - storefront-service.yaml
 - deployment-cm.yaml
-- ingress-https.yaml
+#- ingress-https.yaml
 - middleware-redirect.yaml
 
 configurations:
