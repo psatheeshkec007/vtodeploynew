@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: tenant
   source:
-    path: {name}-app
+    path: virtonew-app
     repoURL: https://github.com/virtocommerce/vc-deploy-apps
     targetRevision: HEAD
   syncPolicy:
