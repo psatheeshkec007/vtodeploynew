@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: dev
     server: https://kubernetes.default.svc
-  project: tenant
+  project: default
   source:
     path: virtonew-app
     repoURL: https://github.com/virtocommerce/vc-deploy-apps
