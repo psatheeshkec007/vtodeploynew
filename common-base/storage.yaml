@@ -10,7 +10,7 @@ spec:
   csi: {}
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
-  storageClassName: "webstore-cms-content"
+  storageClassName: "hostpath"
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
@@ -23,4 +23,4 @@ spec:
     requests:
       storage: 200Mi
   volumeName: cms-content
-  storageClassName: "webstore-cms-content"
+  storageClassName: "hostpath"
