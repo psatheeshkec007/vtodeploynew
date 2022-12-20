@@ -46,11 +46,11 @@ spec:
               memory: "256Mi"
             limits:
               memory: "512Mi"
-          envFrom:
-          - configMapRef:
-              name: platform-cm
-          - configMapRef:
-              name: platform-overlay-config
+          #envFrom:
+          #- configMapRef:
+          #    name: platform-cm
+          #- configMapRef:
+          #    name: platform-overlay-config
   strategy:
     rollingUpdate:
       maxSurge: 0
