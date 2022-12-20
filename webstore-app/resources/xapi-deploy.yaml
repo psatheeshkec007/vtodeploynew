@@ -21,7 +21,7 @@ spec:
           - "-c"
         env:
           - name: PLATFORM_URL
-            value: "https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).govirto.com"
+            value: "https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).svc.cluster.local"
         args:
           - "rm /usr/share/nginx/html/environments/environment.variables.json
             && envsubst '$${PLATFORM_URL}'< /usr/share/nginx/html/environments/environment.variables.json.template > /usr/share/nginx/html/environments/environment.variables.json
@@ -58,10 +58,10 @@ metadata:
 spec:
   tls:
     - hosts:   
-      - "$(VC_INSTANCE)-xapi.$(VC_NAMESPACE).govirto.com"
+      - "$(VC_INSTANCE)-xapi.$(VC_NAMESPACE).svc.cluster.local"
       secretName: $(VC_INSTANCE)-xapi-$(VC_NAMESPACE)-tls
   rules:
-  - host: $(VC_INSTANCE)-xapi.$(VC_NAMESPACE).govirto.com
+  - host: $(VC_INSTANCE)-xapi.$(VC_NAMESPACE).svc.cluster.local
     http:
       paths:
       - backend:

@@ -8,11 +8,11 @@ patchesStrategicMerge:
 - storefront-cm.yaml
 - platform-secrets.yaml
 - platform-cm.yaml
-#- ingress-https.yaml
+- ingress-https.yaml
 
 resources:
 - ../../common-base
-#- xapi-deploy.yaml
+- xapi-deploy.yaml
 
 images:
 - name: docker.pkg.github.com/virtocommerce/vc-platform/platform
