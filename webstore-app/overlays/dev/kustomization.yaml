@@ -30,7 +30,7 @@ patches:
     - op: add
       path: /spec/template/spec/nodeSelector
       value: 
-        agentpool: agentpool
+        agentpool: cluster
   target:
     group: apps
     version: v1
