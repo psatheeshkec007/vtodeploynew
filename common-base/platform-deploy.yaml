@@ -38,15 +38,17 @@ spec:
           - name: VC_DB_COPY_PARAM
             value: "AS COPY OF [$(VC_SAMPLE_DATA_DB)]"
           - name: VC_DBSERVER_MASTER_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: vc-dbserver-password
-                key: password
+            value: "Virto@321"
+          #  valueFrom:
+          #    secretKeyRef:
+          #      name: vc-dbserver-password
+          #      key: password
           - name: VC_DB_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: vc-db-pass
-                key: password
+            value: "Virto@321"
+            #valueFrom:
+            #  secretKeyRef:
+            #    name: vc-db-pass
+            #    key: password
       - name: init-platform
         image: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer:v3
         command:
@@ -75,15 +77,17 @@ spec:
           - name: VC_SAMPLE_DATA_DB
             value: webstore-platform_source  
           - name: VC_DBSERVER_MASTER_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: vc-dbserver-password
-                key: password
+            value: "Virto@321"
+            #valueFrom:
+            #  secretKeyRef:
+            #    name: vc-dbserver-password
+            #    key: password
           - name: VC_DB_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: vc-db-pass
-                key: password
+            value: "Virto@321"
+            #valueFrom:
+            #  secretKeyRef:
+            #    name: vc-db-pass
+            #    key: password
       containers:
       - name: vc-platform-web      
         image: docker.pkg.github.com/virtocommerce/vc-platform/platform:dev-linux-latest
