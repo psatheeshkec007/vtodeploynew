@@ -50,7 +50,7 @@ spec:
             #    name: vc-db-pass
             #    key: password
       - name: init-platform
-        image: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer:v3
+        image: docker.pkg.github.com/virtocommerce/vc-deploy-containers/platform-installer:v7
         command:
           - "/bin/sh"
           - "-c"
