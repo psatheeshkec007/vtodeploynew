@@ -16,14 +16,7 @@ spec:
       labels:
         app: storefront
     spec:
-      nodeAffinity:
-        required:
-            nodeSelectorTerms:
-            - matchExpressions:
-            - key: kubernetes.io/os
-              operator: In
-              values:
-                - linux
+      
       containers:
       - name: vc-storefront-web
         image: docker.pkg.github.com/virtocommerce/vc-storefront/storefront:dev-linux-latest
@@ -39,3 +32,5 @@ spec:
       - name: cms-content-data
         persistentVolumeClaim:
           claimName: cms-content-volume
+      nodeSelector:
+            kubernetes.io/os: windows
