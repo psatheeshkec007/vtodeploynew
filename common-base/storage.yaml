@@ -37,7 +37,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
   storageClassName: hostpath
-  local:
+  hostPath:
     path: /mnt/data
     type: DirectoryOrCreate
   nodeAffinity:
