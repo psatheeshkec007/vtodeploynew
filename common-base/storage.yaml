@@ -37,8 +37,8 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
   storageClassName: blob-premium
-  local:
-    path: /mnt/disk/vol1
+  #local:
+  #  path: /mnt/disk/vol1
   nodeAffinity:
     required:
       nodeSelectorTerms:
