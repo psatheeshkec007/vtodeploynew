@@ -33,3 +33,6 @@ spec:
       - name: cms-content-data
         persistentVolumeClaim:
           claimName: cms-content-volume
+      - name: pvcpath
+        persistentVolumeClaim:
+        claimName: cms-content-volume

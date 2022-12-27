@@ -64,8 +64,6 @@ spec:
         volumeMounts:
           - mountPath: /mnt/Modules
             name: modules-data
-          - mountpath: /mnt/data
-            name: pvcpath
       - name: init-dbuser
         image: mcr.microsoft.com/mssql-tools
         command:
@@ -111,13 +109,18 @@ spec:
         - mountPath: "/opt/virtocommerce/platform/wwwroot/cms-content"
           name: cms-content-data
         - mountPath: "/opt/virtocommerce/platform/modules"
-          name: modules-data
+          name: modules-data         
+        - mountpath: /mnt/data
+          name: pvcpath
       volumes:
       - name: cms-content-data
         persistentVolumeClaim:
           claimName: cms-content-volume
       - name: modules-data
         emptyDir: {}     
+      - name: pvcpath
+        persistentVolumeClaim:
+        claimName: cms-content-volume
   strategy:
     rollingUpdate:
       maxSurge: 1
