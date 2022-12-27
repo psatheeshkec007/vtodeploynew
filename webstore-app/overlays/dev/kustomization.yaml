@@ -26,16 +26,16 @@ configMapGenerator:
     - VAULT_API_URL=http://vault-dev.vault-dev.svc.cluster.local:8200
 
 
-patches:
-- patch: |-
-    - op: add
-      path: /spec/template/spec/nodeselector
-      value: 
-        agentpool: agentpool
-  target:
-    group: apps
-    version: v1
-    kind: deployment
+#patches:
+#- patch: |-
+#    - op: add
+#      path: /spec/template/spec/nodeselector
+#      value: 
+#        agentpool: agentpool
+#  target:
+#    group: apps
+#    version: v1
+#    kind: deployment
 #- patch: |-
 #    - op: add
 #      path: /spec/csi
