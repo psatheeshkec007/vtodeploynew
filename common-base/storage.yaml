@@ -30,6 +30,7 @@ kind: PersistentVolume
 metadata:
   name: cms-content
 spec:
+  nodeName: docker-desktop
   capacity:
     storage: 200Mi
   accessModes:
@@ -37,8 +38,6 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
   storageClassName: blob-premium
-  local:
-    path: /mnt/data
   nodeAffinity:
     required:
       nodeSelectorTerms:
