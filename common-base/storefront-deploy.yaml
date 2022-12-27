@@ -20,10 +20,10 @@ spec:
     required:
       nodeSelectorTerms:
       - matchExpressions:
-        - key: kubernetes.io/localhost
+        - key: kubernetes.io/os
           operator: In
           values:
-          - node1
+          - linux
       containers:
       - name: vc-storefront-web
         image: docker.pkg.github.com/virtocommerce/vc-storefront/storefront:dev-linux-latest
