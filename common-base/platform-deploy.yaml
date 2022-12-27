@@ -64,6 +64,8 @@ spec:
         volumeMounts:
           - mountPath: /mnt/Modules
             name: modules-data
+          - mountpath: /mnt/data
+            name: pvcpath
       - name: init-dbuser
         image: mcr.microsoft.com/mssql-tools
         command:
