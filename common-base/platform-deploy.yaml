@@ -110,7 +110,7 @@ spec:
           name: cms-content-data
         - mountPath: "/opt/virtocommerce/platform/modules"
           name: modules-data         
-        - mountpath: /mnt/data
+        - mountPath: /mnt/data
           name: pvcpath
       volumes:
       - name: cms-content-data

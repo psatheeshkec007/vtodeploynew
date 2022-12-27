@@ -27,7 +27,7 @@ spec:
         volumeMounts:
         - mountPath: /opt/virtocommerce/storefront/wwwroot/cms-content
           name: cms-content-data
-        - mountpath: /mnt/data
+        - mountPath: /mnt/data
           name: pvcpath
       volumes:
       - name: cms-content-data
