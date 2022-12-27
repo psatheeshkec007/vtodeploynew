@@ -37,8 +37,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
   storageClassName: blob-premium
-  local:
-    fsType : ext4
+  hostpath:
     path: /mnt/data
   nodeAffinity:
     required:
