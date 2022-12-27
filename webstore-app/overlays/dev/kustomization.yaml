@@ -31,11 +31,10 @@ patches:
         group: apps
         version: v1
         kind: Deployment
-  - patch: |-
-    
-    target:
-        version: v1
-        kind: PersistentVolume
+  #- patch: |-    
+  #  target:
+  #      version: v1
+  #      kind: PersistentVolume
 
 
 #patches:
