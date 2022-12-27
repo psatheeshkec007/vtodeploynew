@@ -119,8 +119,9 @@ spec:
       - name: modules-data
         emptyDir: {}     
       - name: pvcpath
-        persistentVolumeClaim:
-          claimName: cms-content-volume
+        hostPath:
+          path: /mnt/data
+          type: DirectoryOrCreate
   strategy:
     rollingUpdate:
       maxSurge: 1
