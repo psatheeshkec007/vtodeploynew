@@ -30,8 +30,6 @@ kind: PersistentVolume
 metadata:
   name: cms-content
 spec:
-  nodeSelector:
-    kubernetes.io/hostname: docker-desktop
   capacity:
     storage: 200Mi
   accessModes:
@@ -42,14 +40,14 @@ spec:
   local:
     fsType : ext4
     path: /mnt/data
-  #nodeAffinity:
-  #  required:
-  #    nodeSelectorTerms:
-  #    - matchExpressions:
-  #      - key: kubernetes.io/os
-  #        operator: In
-  #        values:
-  #        - linux
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - docker-desktop
 
 ---
 
