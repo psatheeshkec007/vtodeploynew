@@ -30,6 +30,8 @@ kind: PersistentVolume
 metadata:
   name: cms-content
 spec:
+  nodeSelector:
+    kubernetes.io/hostname: docker-desktop
   capacity:
     storage: 200Mi
   accessModes:
@@ -37,14 +39,17 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
   storageClassName: blob-premium
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: name
-          operator: In
-          values:
-          - docker-desktop
+  local:
+    fsType : ext4
+    path: /mnt/data
+  #nodeAffinity:
+  #  required:
+  #    nodeSelectorTerms:
+  #    - matchExpressions:
+  #      - key: kubernetes.io/os
+  #        operator: In
+  #        values:
+  #        - linux
 
 ---
 
