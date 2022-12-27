@@ -38,6 +38,7 @@ spec:
   volumeMode: Filesystem
   storageClassName: hostpath
   local:
+    fsType: ext4
     path: /mnt/data
   nodeAffinity:
     required:
