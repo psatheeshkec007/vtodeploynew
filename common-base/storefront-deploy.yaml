@@ -35,4 +35,4 @@ spec:
           claimName: cms-content-volume
       - name: pvcpath
         persistentVolumeClaim:
-        claimName: cms-content-volume
+          claimName: cms-content-volume

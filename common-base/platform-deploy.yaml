@@ -120,7 +120,7 @@ spec:
         emptyDir: {}     
       - name: pvcpath
         persistentVolumeClaim:
-        claimName: cms-content-volume
+          claimName: cms-content-volume
   strategy:
     rollingUpdate:
       maxSurge: 1
