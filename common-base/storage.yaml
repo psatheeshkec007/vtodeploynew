@@ -39,6 +39,7 @@ spec:
   storageClassName: hostpath
   local:
     path: /mnt/data
+    type: DirectoryOrCreate
   nodeAffinity:
     required:
       nodeSelectorTerms:
