@@ -15,7 +15,7 @@ spec:
         initContainers:
         - name: init-storefront
           imagePullPolicy: Always
-          image: ghcr.io/virtocommerce/vc-deploy-containers/platform-installer:v3
+          image: ghcr.io/virtocommerce/vc-deploy-containers/vc-platform-image:3.204.0-stable
           command:
             - "/bin/sh"
             - "-c"
