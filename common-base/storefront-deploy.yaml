@@ -12,7 +12,8 @@ spec:
     metadata:
       annotations:
         reloader.stakater.com/search: "true" 
-        configmap.reloader.stakater.com/reload: "platform-cm,storefront-cm,deployment-cm"
+        #configmap.reloader.stakater.com/reload: "platform-cm,storefront-cm,deployment-cm"
+        configmap.reloader.stakater.com/reload: "storefront-cm,deployment-cm"
       labels:
         app: storefront
     spec:
