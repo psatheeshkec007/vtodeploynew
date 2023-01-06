@@ -9,14 +9,14 @@ spec:
         annotations:
           reloader.stakater.com/search: "true"
           configmap.reloader.stakater.com/reload: "webstore-platform-cm, webstore-deployment-cm, webstore-platform-secret-configmap"
-          vault.hashicorp.com/agent-inject: "true"
+          vault.hashicorp.com/agent-inject: "false"
           vault.hashicorp.com/agent-pre-populate-only: "true"
           vault.hashicorp.com/agent-configmap: "webstore-platform-secret-configmap"
           vault.hashicorp.com/agent-requests-cpu: "25m"
           vault.hashicorp.com/agent-limits-cpu: "50m"   
     spec:
-      #imagePullSecrets:
-      #  - name: dockerconfigjson-github-com
+      imagePullSecrets:
+        - name: dockerconfigjson-github-com
       initContainers:
         - name: init-sqldatabase
           env:
