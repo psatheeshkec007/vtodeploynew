@@ -102,12 +102,11 @@ spec:
         #      key: password
         - name: ConnectionStrings__VirtoCommerce
           value: "Server=tcp:$(VC_DB_HOST),1433;Database=$(VC_PLATFORM_SERVICE)_$(VC_NAMESPACE);User ID=$(VC_INSTANCE)_$(VC_NAMESPACE)_user@$(VC_DB_HOST);Password=$(Virto@321);Trusted_Connection=False;Encrypt=True;"
-        command:
-            - "/bin/bash"
-            - "-c"
-        args:
+        #command:
+        #    - "/bin/bash"
+        #    - "-c"
+        #args:
         #    - "source /vault/secrets/config_base && source /vault/secrets/config_custom && dotnet VirtoCommerce.Platform.Web.dll"
-            - "dotnet VirtoCommerce.Platform.Web.dll"
         ports:
         - containerPort: 80
         volumeMounts:
