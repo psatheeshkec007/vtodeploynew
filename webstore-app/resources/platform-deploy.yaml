@@ -37,7 +37,6 @@ spec:
             httpGet:
               path: /health
               port: 80
-              targetPort: 8090
             failureThreshold: 50
             successThreshold: 1
             initialDelaySeconds: 10
