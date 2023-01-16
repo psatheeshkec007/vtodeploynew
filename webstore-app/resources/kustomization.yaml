@@ -15,9 +15,9 @@ resources:
 #- xapi-deploy.yaml
 
 images:
-- name: docker.pkg.github.com/virtocommerce/vc-platform/platform
-  newName: ghcr.io/virtocommerce/platform
-  newTag: 3.84.0-master-829e77f5
+- name: docker.pkg.github.com/psatheeshkec007/virtocommerceplatformweb
+  newName: ghcr.io/psatheeshkec007/virtocommerceplatformweb
+  newTag: latest
 - name: docker.pkg.github.com/virtocommerce/vc-storefront/storefront
   newName: ghcr.io/virtocommerce/demo-storefront
   newTag: 1.13.0-alpha.1042-dev-b42b8d9a
