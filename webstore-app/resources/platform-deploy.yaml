@@ -17,20 +17,20 @@ spec:
     spec:
       imagePullSecrets:
         - name: dockerconfigjson-github-com
-      #initContainers:
-      #  - name: init-sqldatabase
-      #    env:
-      #      - name: VC_SAMPLE_DATA_DB
-      #        value: webstore-platform_source
-      #  - name: init-platform
-      #    imagePullPolicy: Always
-      #    image: ghcr.io/virtocommerce/vc-deploy-containers/platform-installer:v3
-      #    command:
-      #      - "/bin/sh"
-      #      - "-c"
-      #    args:
-      #      - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
-      #      && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*"
+      initContainers:
+        #- name: init-sqldatabase
+        #  env:
+        #    - name: VC_SAMPLE_DATA_DB
+        #      value: webstore-platform_source
+        - name: init-platform
+          imagePullPolicy: Always
+          image: ghcr.io/virtocommerce/vc-deploy-containers/platform-installer:v7
+          command:
+            - "/bin/sh"
+            - "-c"
+          args:
+            - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
+            && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*"
       containers:
         - name: vc-platform-web
           startupProbe:
