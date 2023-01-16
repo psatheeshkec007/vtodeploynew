@@ -34,7 +34,7 @@ spec:
           # readinessProbe:
           #   httpGet:
           #     path: /
-          #     port: 8090
+          #     port: 80
           #   failureThreshold: 3
           #   successThreshold: 1
           #   initialDelaySeconds: 5

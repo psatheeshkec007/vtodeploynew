@@ -9,4 +9,4 @@ spec:
     query: /
     service:
       name: error-page-s
-      port: 8090
+      port: 80
