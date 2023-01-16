@@ -13,7 +13,7 @@ data:
     APPINSIGHTS_INSTRUMENTATIONKEY: "4122074c-f2ad-489b-811f-d557350fb644"
     Swagger__UI__Enabled: "false"
     PushNotifications__ForceWebSockets: "true"
-    PushNotifications__ScalabilityMode: "RedisBackplane"
+    PushNotifications__ScalabilityMode: "None"
     PushNotifications__HubUrl: "https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).svc.cluster.local/pushNotificationHub"
     PushNotifications__RedisBackplane__ChannelName: "$(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)-chanel"
     AzureAd__Enabled: "true"
