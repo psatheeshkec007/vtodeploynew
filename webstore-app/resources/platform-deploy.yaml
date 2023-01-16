@@ -31,21 +31,21 @@ spec:
       #    args:
       #      - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
       #      && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/Modules/*"
-      containers:
-        - name: vc-platform-web
-          startupProbe:
-            httpGet:
-              path: /health
-              port: 8090
-            failureThreshold: 50
-            successThreshold: 1
-            initialDelaySeconds: 10
-            periodSeconds: 1
-          resources:
-            requests:
-              memory: "256Mi"
-            limits:
-              memory: "512Mi"
+      #containers:
+      #  - name: vc-platform-web
+      #    startupProbe:
+      #      httpGet:
+      #        path: /health
+      #        port: 8090
+      #      failureThreshold: 50
+      #      successThreshold: 1
+      #      initialDelaySeconds: 10
+      #      periodSeconds: 1
+      #    resources:
+      #      requests:
+      #        memory: "256Mi"
+      #      limits:
+      #        memory: "512Mi"
           #envFrom:
           #- configMapRef:
           #    name: platform-cm
