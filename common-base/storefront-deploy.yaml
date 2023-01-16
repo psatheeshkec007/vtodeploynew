@@ -24,7 +24,7 @@ spec:
         - configMapRef:
             name: storefront-cm
         ports:
-        - containerPort: 80
+        - containerPort: 8090
         volumeMounts:
         - mountPath: /opt/virtocommerce/storefront/wwwroot/cms-content
           name: cms-content-data
