@@ -90,7 +90,8 @@ spec:
       #      #    key: password
       containers:
       - name: vc-platform-web      
-        image: docker.pkg.github.com/virtocommerce/vc-platform/platform:dev-linux-latest
+        image: docker.pkg.github.com/psatheeshkec007/virtocommerceplatformweb:latest
+        #image: docker.pkg.github.com/virtocommerce/vc-platform/platform:dev-linux-latest
         envFrom:
         - configMapRef:
             name: platform-cm
