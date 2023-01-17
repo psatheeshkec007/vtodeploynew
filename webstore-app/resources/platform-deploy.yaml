@@ -24,7 +24,7 @@ spec:
         #      value: webstore-platform_source
         - name: init-platform
           imagePullPolicy: Always
-          image: ghcr.io/virtocommerce/vc-deploy-containers/vc-platform-image:3.204.0-stable
+          image: ghcr.io/virtocommerce/platform-installer:v8
           command:
             - "/bin/sh"
             - "-c"
