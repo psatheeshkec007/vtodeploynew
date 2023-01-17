@@ -24,7 +24,7 @@ data:
     {
       "Id": "VirtoCommerce.Core",
       "Repository": "VirtoCommerce/vc-module-core",
-      "PackageUrl": "https://github.com/VirtoCommerce/vc-module-core/releases/download/3.7.0/VirtoCommerce.Core_3.7.0.zip"
+      "PackageUrl": "https://github.com/VirtoCommerce/vc-module-core/releases/download/3.207.0/VirtoCommerce.Core_3.207.0.zip"
     },
     {
       "Id": "VirtoCommerce.AzureSearch",
