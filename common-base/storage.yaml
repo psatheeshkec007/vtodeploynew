@@ -63,3 +63,43 @@ spec:
       storage: 200Mi
   volumeName: cms-content
   storageClassName: "hostpath"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: module-content
+spec:
+  capacity:
+    storage: 200Mi
+  accessModes:
+  - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  volumeMode: Filesystem
+  storageClassName: hostpath
+  hostPath:
+    path: /mnt/Modules
+    type: DirectoryOrCreate
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/os
+          operator: In
+          values:
+          - linux
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: module-content-volume
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 200Mi
+  volumeName: module-content
+  storageClassName: "hostpath"

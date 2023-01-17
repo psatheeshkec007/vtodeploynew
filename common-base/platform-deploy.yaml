@@ -125,7 +125,7 @@ spec:
           claimName: cms-content-volume
       - name: modules-data
         hostPath:
-          path: /mnt/data
+          path: /mnt/Modules
           type: DirectoryOrCreate  
       - name: pvcpath
         hostPath:
