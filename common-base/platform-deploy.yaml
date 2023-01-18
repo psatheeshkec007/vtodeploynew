@@ -111,7 +111,7 @@ spec:
         ports:
         #- containerPort: 80
         - protocol: TCP
-          port: 80
+          containerPort: 80
           targetPort: 8090
         volumeMounts:
         - mountPath: "/opt/virtocommerce/platform/wwwroot/cms-content"
