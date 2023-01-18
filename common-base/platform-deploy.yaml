@@ -109,10 +109,8 @@ spec:
         #args:
         #    - "source /vault/secrets/config_base && source /vault/secrets/config_custom && dotnet VirtoCommerce.Platform.Web.dll"
         ports:
-        #- containerPort: 80
-        - protocol: TCP
-          containerPort: 80
-          targetPort: 8090
+        - containerPort: 80
+        - containerPort: 8090
         volumeMounts:
         - mountPath: "/opt/virtocommerce/platform/wwwroot/cms-content"
           name: cms-content-data
