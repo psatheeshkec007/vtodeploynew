@@ -117,8 +117,6 @@ spec:
           name: modules-data         
         - mountPath: /mnt/data
           name: pvcpath
-        - mountPath: /mnt/Modules
-          name: modules-data
       volumes:
       - name: cms-content-data
         persistentVolumeClaim:
