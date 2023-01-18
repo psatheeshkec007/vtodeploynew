@@ -36,7 +36,7 @@ spec:
           startupProbe:
             httpGet:
               path: /health
-              port: 80
+              port: 8090
             failureThreshold: 50
             successThreshold: 1
             initialDelaySeconds: 10
