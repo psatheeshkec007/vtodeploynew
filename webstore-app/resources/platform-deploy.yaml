@@ -39,7 +39,7 @@ spec:
               port: 80
             failureThreshold: 50
             successThreshold: 1
-            initialDelaySeconds: 50
+            initialDelaySeconds: 10
             periodSeconds: 1
           resources:
             requests:
