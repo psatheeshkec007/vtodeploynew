@@ -123,8 +123,7 @@ spec:
         persistentVolumeClaim:
           claimName: cms-content-volume
       - name: modules-data
-        persistentVolumeClaim:
-          claimName: module-content-volume
+        emptyDir: {}
       - name: pvcpath
         hostPath:
           path: /mnt/data
