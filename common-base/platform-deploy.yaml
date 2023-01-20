@@ -117,14 +117,13 @@ spec:
           name: modules-data         
         - mountPath: /mnt/data
           name: pvcpath
-        - mountPath: /mnt/Modules
-          name: modules-data
       volumes:
       - name: cms-content-data
         persistentVolumeClaim:
           claimName: cms-content-volume
       - name: modules-data
-        emptyDir: {}     
+        persistentVolumeClaim:
+          claimName: cms-content-volume
       - name: pvcpath
         hostPath:
           path: /mnt/data
