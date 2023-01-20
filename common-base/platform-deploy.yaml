@@ -122,8 +122,9 @@ spec:
         persistentVolumeClaim:
           claimName: cms-content-volume
       - name: modules-data
-        persistentVolumeClaim:
-          claimName: cms-content-volume
+        hostPath:
+          path: /mnt/data
+          type: DirectoryOrCreate
       - name: pvcpath
         hostPath:
           path: /mnt/data
