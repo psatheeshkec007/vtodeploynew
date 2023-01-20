@@ -111,10 +111,10 @@ spec:
         ports:
         - containerPort: 80
         volumeMounts:
-        - mountPath: "/opt/virtocommerce/platform/wwwroot/cms-content"
-          name: cms-content-data
-        - mountPath: "/opt/virtocommerce/platform/modules"
-          name: modules-data         
+        #- mountPath: "/opt/virtocommerce/platform/wwwroot/cms-content"
+        #  name: cms-content-data
+        #- mountPath: "/opt/virtocommerce/platform/modules"
+        #  name: modules-data         
         - mountPath: /mnt/data
           name: pvcpath
       volumes:
