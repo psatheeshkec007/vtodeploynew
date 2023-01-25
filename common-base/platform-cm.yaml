@@ -5,14 +5,14 @@ metadata:
   annotations:
     reloader.stakater.com/match: "true"  
 data:
-  #Assets__FileSystem__PublicUrl: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).svc.cluster.local/cms-content/assets/
-  #Assets__FileSystem__RootPath: ~/cms-content/assets
-  #Content__FileSystem__PublicUrl: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).svc.cluster.local/cms-content/
-  #VirtoCommerce__AllowInsecureHttp: "true"
-  #VirtoCommerce__LicenseFilePath: App_Data/VirtoCommerce.lic
-  #VirtoCommerce__LicensePublicKeyPath: App_Data/public.key
-  #VirtoCommerce__LicensePrivateKeyPath: App_Data/private.key
-  #VirtoCommerce__LocalUploadFolderPath: App_Data/Uploads
+  Assets__FileSystem__PublicUrl: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).svc.cluster.local/cms-content/assets/
+  Assets__FileSystem__RootPath: ~/cms-content/assets
+  Content__FileSystem__PublicUrl: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).svc.cluster.local/cms-content/
+  VirtoCommerce__AllowInsecureHttp: "true"
+  VirtoCommerce__LicenseFilePath: App_Data/VirtoCommerce.lic
+  VirtoCommerce__LicensePublicKeyPath: App_Data/public.key
+  VirtoCommerce__LicensePrivateKeyPath: App_Data/private.key
+  VirtoCommerce__LocalUploadFolderPath: App_Data/Uploads
   #Search__Provider: ElasticSearch
   #Search__Scope: "$(VC_PLATFORM_SERVICE)$(VC_NAMESPACE)index"
   #Search__ElasticSearch__Server: http://search-dev-es-http.elastic-system:9200
