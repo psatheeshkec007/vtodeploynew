@@ -74,7 +74,7 @@ spec:
     storage: 200Mi
   accessModes:
   - ReadWriteMany
-  persistentVolumeReclaimPolicy: Retain
+  persistentVolumeReclaimPolicy: Delete
   volumeMode: Filesystem
   storageClassName: hostpath
   hostPath:
