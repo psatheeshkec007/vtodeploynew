@@ -114,7 +114,9 @@ spec:
         #- mountPath: "/opt/virtocommerce/platform/wwwroot/cms-content"
         #  name: cms-content-data
         #- mountPath: "/opt/virtocommerce/platform/modules"
-        #  name: modules-data         
+        #  name: modules-data 
+        - mountPath: "/mnt/Modules"
+          name: modules-data         
         - mountPath: /mnt/data
           name: pvcpath
       volumes:
@@ -122,9 +124,8 @@ spec:
         persistentVolumeClaim:
           claimName: cms-content-volume
       - name: modules-data
-        hostPath:
-          path: /mnt/data
-          type: DirectoryOrCreate
+        persistentVolumeClaim:
+          claimName: Module-content-volume
       - name: pvcpath
         hostPath:
           path: /mnt/data
