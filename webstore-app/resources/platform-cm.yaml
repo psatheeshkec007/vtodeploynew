@@ -16,9 +16,9 @@ data:
     PushNotifications__ScalabilityMode: "None"
     PushNotifications__HubUrl: "https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).svc.cluster.local/pushNotificationHub"
     PushNotifications__RedisBackplane__ChannelName: "$(VC_PLATFORM_SERVICE)-$(VC_NAMESPACE)-chanel"
-    #AzureAd__Enabled: "true"
-    #AzureAd__ApplicationId: "80277d3d-4357-46f0-917f-334177695a0f"
-    #AzureAd__TenantId: "bc03e660-5e3a-45c4-bf5c-b75489f78923"
+    AzureAd__Enabled: "true"
+    AzureAd__ApplicationId: "80277d3d-4357-46f0-917f-334177695a0f"
+    AzureAd__TenantId: "bc03e660-5e3a-45c4-bf5c-b75489f78923"
     ASPNETCORE_FORWARDEDHEADERS_ENABLED: "true"
     Content__FileSystem__PublicUrl: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).svc.cluster.local/cms-content/
     Assets__FileSystem__PublicUrl: https://$(VC_PLATFORM_SERVICE).$(VC_NAMESPACE).svc.cluster.local/cms-content/assets/
@@ -28,5 +28,5 @@ data:
     VirtoCommerce__LicensePublicKeyPath: app_data/VirtoCommerce_rsa.pub
     VirtoCommerce__LicensePrivateKeyPath: app_data/private.key
     VirtoCommerce__LocalUploadFolderPath: app_data/uploads
-    #Search__ElasticSearch__Server: http://search-dev-es-http.elastic-system:9200
+    Search__ElasticSearch__Server: http://search-dev-es-http.elastic-system:9200
     DemoFeatures__ConfigurableProduct: "true"
