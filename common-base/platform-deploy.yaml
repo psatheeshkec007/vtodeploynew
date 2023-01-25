@@ -112,10 +112,10 @@ spec:
         - containerPort: 80
         - containerPort: 8090
         volumeMounts:
-        #- mountPath: "/opt/virtocommerce/platform/wwwroot/cms-content"
-        #  name: cms-content-data
-        #- mountPath: "/opt/virtocommerce/platform/modules"
-        #  name: modules-data 
+        - mountPath: "/opt/virtocommerce/platform/wwwroot/cms-content"
+          name: cms-content-data
+        - mountPath: "/opt/virtocommerce/platform/modules"
+          name: modules-data 
         - mountPath: "/mnt/modules"
           name: modules-data         
         - mountPath: /mnt/data
@@ -124,9 +124,9 @@ spec:
       - name: cms-content-data
         persistentVolumeClaim:
           claimName: cms-content-volume
-      #- name: modules-data
-      #  persistentVolumeClaim:
-      #    claimName: module-content-volume
+      - name: modules-data
+        persistentVolumeClaim:
+          claimName: module-content-volume
       - name: pvcpath
         hostPath:
           path: /mnt/data
