@@ -78,7 +78,7 @@ spec:
   volumeMode: Filesystem
   storageClassName: hostpath
   hostPath:
-    path: /mnt/Modules
+    path: /mnt/modules
     type: DirectoryOrCreate
   nodeAffinity:
     required:
@@ -94,12 +94,12 @@ spec:
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: Module-content-volume
+  name: module-content-volume
 spec:
   accessModes:
     - ReadWriteMany
   resources:
     requests:
       storage: 200Mi
-  volumeName: Module-content
+  volumeName: module-content
   storageClassName: "hostpath"
