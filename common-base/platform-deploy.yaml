@@ -49,23 +49,23 @@ spec:
       #      #  secretKeyRef:
       #      #    name: vc-db-pass
       #      #    key: password
-      - name: init-platform
-        image: ghcr.io/virtocommerce/platform-installer:v8
-        command:
-          - "/bin/sh"
-          - "-c"
-        args:
-          - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
-          && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/modules/*"
-        env:
-          - name: MODULES_CONFIG
-            valueFrom:
-              configMapKeyRef:
-                name: modules-cm
-                key: modules.json 
-        volumeMounts:
-          - mountPath: /mnt/modules
-            name: modules-data
+      #- name: init-platform
+      #  image: ghcr.io/virtocommerce/platform-installer:v8
+      #  command:
+      #    - "/bin/sh"
+      #    - "-c"
+      #  args:
+      #    - "echo START INIT $(date +%Y-%m-%d-%H-%M-%S)
+      #    && python3 install-modules.py \"$MODULES_CONFIG\" /mnt/modules/*"
+      #  env:
+      #    - name: MODULES_CONFIG
+      #      valueFrom:
+      #        configMapKeyRef:
+      #          name: modules-cm
+      #          key: modules.json 
+      #  volumeMounts:
+      #    - mountPath: /mnt/modules
+      #      name: modules-data
       #- name: init-dbuser
       #  image: mcr.microsoft.com/mssql-tools
       #  command:
