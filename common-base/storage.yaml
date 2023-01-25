@@ -68,7 +68,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: Module-content
+  name: module-content
 spec:
   capacity:
     storage: 200Mi
